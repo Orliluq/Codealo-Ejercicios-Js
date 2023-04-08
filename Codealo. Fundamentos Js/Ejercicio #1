@@ -1,0 +1,27 @@
+// Vamos a darle la vuelta a un string
+
+// Crea una función llamada reverse que tome como parámetro un string y regrese ese string pero al revés.
+
+// Si envió codealo espero que me regreses olaedoc.
+
+// Forma sencilla:
+
+// function reverse(valor) {
+//  let resultado = "";
+//  for (let i = valor.length - 1; i >= 0; i--) {
+//    resultado += valor[i];
+//  }
+//  return resultado;
+
+
+function reverse(str) {
+    return str.split('').reverse().join('');
+  }
+console.log(reverse("codealo"));
+console.log(reverse("javascript"));
+console.log(reverse("la programacion es lo mejor"));
+console.log(reverse("12346789"));
+
+// Aquí, split('') separa el string en una matriz de caracteres, 
+// reverse() invierte el orden de los caracteres en la matriz, y join('') 
+// vuelve a unir la matriz en un string.

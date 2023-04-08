@@ -1,0 +1,46 @@
+// Muchas universidades reconocen el desempeño académico de los estudiantes y usualmente le dan beneficios a aquellos estudiantes que están en el tercio superior.
+
+// En este ejercicio vamos a encontrar a los estudiantes que pertenecen a este tercio superior y que van a recibir una beca del 30% el siguiente año escolar.
+
+let estudiantes = [
+    { nombre: 'Ana', promedio: 19.3 },
+    { nombre: 'Juan', promedio: 18.8 },
+    { nombre: 'Sandra', promedio: 18.3 },
+    { nombre: 'Pedro', promedio: 16.3 },
+    { nombre: 'Mario', promedio: 16.3 },
+    { nombre: 'Sandra', promedio: 16.3 },
+    { nombre: 'Raul', promedio: 14.3 },
+    { nombre: 'María', promedio: 14.3 },
+    { nombre: 'María Alejandra', promedio: 14.3 },
+    { nombre: 'Juan Miguel', promedio: 14.3 },
+    { nombre: 'Ricardo', promedio: 12.3 },
+    { nombre: 'Rosa', promedio: 11.3 },
+    { nombre: 'Miguel', promedio: 10.3 },
+    { nombre: 'Armiel', promedio: 10.2 },
+    { nombre: 'Daniel', promedio: 10.2 }
+]
+
+  // Escribe aquí tu código
+  // Ordenamos los estudiantes de mayor a menor promedio
+estudiantes.sort(function(a,b) {
+    return b.promedio - a.promedio;
+  });
+  
+  // Obtenemos el número de estudiantes del tercio superior
+  var tercio = Math.ceil(estudiantes.length / 3);
+  
+  // Seleccionamos los estudiantes del tercio superior
+  var estudiantesSuperior = estudiantes.slice(0, tercio);
+  
+  // Agregamos al arreglo tercioSuperior solamente los nombres de los estudiantes
+  var tercioSuperior = [];
+  for (var i = 0; i < estudiantesSuperior.length; i++) {
+    tercioSuperior.push(estudiantesSuperior[i].nombre);
+  }
+  
+  // Aplicamos un 30% de descuento a las notas de los estudiantes del tercio superior
+  var becaTercioSuperior = estudiantesSuperior.map(estudiante => estudiante.promedio * 0.3);
+  
+  // Imprime la lista del nombre de los estudiantes
+  // que pertenecen al tercio superior
+  console.log(tercioSuperior);

@@ -1,0 +1,51 @@
+<!-- La secuencia de Fibonacci es uno de los algoritmos de matemáticas más populares y es algo que podemos solucionar con la programación y los conocimientos de este curso.
+
+Para encontrar el valor del número n en la secuencia debemos de agregar los 2 números anteriores en la secuencia. Es decir n = n-1 + n-2
+
+En este ejercicio vas a escribir una función que regrese el número de fibonacci.
+
+Los primeros dos números de la secuencia es 0 y 1.
+
+Entonces si n=5 tenemos lo siguiente.
+
+0, 1, 1, 2, 3
+
+Entonces la respuesta es 5. -->
+
+function fibonacci(n) {
+  if(n === 0) {
+    return 0;
+  }
+  if(n === 1) {
+    return 1;
+  }
+  let n0 = 0;
+  let n1 = 1;
+  let resultado = n0 + n1;
+  for(var i = 2; i < n; i++) {
+    n0 = n1;
+    n1 = resultado;
+    resultado = n0 + n1;
+  } 
+  return resultado;
+}
+
+console.log(fibonacci(0));
+console.log(fibonacci(1));
+console.log(fibonacci(7));
+console.log(fibonacci(25));
+
+// function fibonacci(n) {
+//  var a = 0, b = 1, fib = 1;
+//  if (n <= 1) {
+//    return n;
+//  } else {
+//    for (var i = 2; i <= n; i++) {
+//      fib = a + b;
+//      a = b;
+//      b = fib;
+//    }
+//    return fib;
+//  }
+
+//}

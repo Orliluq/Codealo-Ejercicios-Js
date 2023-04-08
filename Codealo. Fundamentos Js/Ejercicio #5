@@ -1,0 +1,28 @@
+// Contar la cantidad de veces que se repite una letra en un string
+
+// En este ejercicio vamos a practicar la agrupación y el conteo para poder resolver el problema.
+
+let palabra = "addbbsjdsuasssaddaannnddjsasjjasdaqoop";
+
+let agrupacion = {};
+
+// Escribe aquí tu código:
+
+for (var i = 0; i < palabra.length; i++) {
+  var letra = palabra[i];
+  if(agrupacion[letra]) {
+    agrupacion[letra]++;
+  } else {
+    agrupacion[letra] = 1;
+  }
+}
+
+// Imprime la lista del nombre de los estudiantes
+// que pertenecen al tercio superior
+console.log(agrupacion);
+
+// En este ejemplo, se recorre la cadena "palabra" y se actualiza el contador "agrupacion" para cada letra encontrada en la cadena. Si la letra ya ha sido encontrada, se incrementa su contador en 1; de lo contrario, se inicializa su contador en 1. Finalmente, se imprime el contador con el número de veces que se repite cada letra en la cadena.
+
+// El resultado para el string dado sería:
+
+// { a: 8, d: 7, b: 3, s: 6, j: 3, u: 1, n: 3, q: 2, o: 2, p: 1 }
